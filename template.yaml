@@ -166,7 +166,7 @@ Resources:
         EnvironmentVariables:
           - Name: REPO
             Type: PLAINTEXT
-            Value: https://github.com/lgalea36/aws.git
+            Value: https://github.com/lgalea36/aws-serverless-data-lake-framework.git
       ServiceRole: !GetAtt rCodeBuildServiceRole.Arn
       TimeoutInMinutes: 30
       Source:
