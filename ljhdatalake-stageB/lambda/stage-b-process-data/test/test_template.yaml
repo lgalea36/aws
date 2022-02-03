@@ -6,35 +6,35 @@ Parameters:
   pDynamoObjectMetadata:
     Description: "DynamoDB object catalog"
     Type: "AWS::SSM::Parameter::Value<String>"
-    Default: "/SDLF/Dynamo/ObjectCatalog"
+    Default: "/LJHDATALAKE/Dynamo/ObjectCatalog"
   pDynamoTransformMapping:
     Description: "DynamoDB transform mapping"
     Type: "AWS::SSM::Parameter::Value<String>"
-    Default: "/SDLF/Dynamo/TransformMapping"
+    Default: "/LJHDATALAKE/Dynamo/TransformMapping"
   pDynamoDataset:
     Description: "DynamoDB dataset"
     Type: "AWS::SSM::Parameter::Value<String>"
-    Default: "/SDLF/Dynamo/Dataset"
+    Default: "/LJHDATALAKE/Dynamo/Dataset"
   pGlueDataCatalog:
     Description: "Glue data catalog"
     Type: "AWS::SSM::Parameter::Value<String>"
-    Default: "/SDLF/Glue/DataCatalog"
+    Default: "/LJHDATALAKE/Glue/DataCatalog"
   pDatalakeLibraryLayer:
     Description: "The ARN of the latest version of the Datalake Library layer"
     Type: "AWS::SSM::Parameter::Value<String>"
-    Default: "/SDLF/Lambda/LatestDatalakeLibraryLayer"
+    Default: "/LJHDATALAKE/Lambda/LatestDatalakeLibraryLayer"
   pDataEngineerRoleName:
     Description: "The name of the Data Engineer role to attach permissions to"
     Type: "AWS::SSM::Parameter::Value<String>"
-    Default: "/SDLF/IAM/DataEngineerRole"
+    Default: "/LJHDATALAKE/IAM/DataEngineerRole"
   pDataScientistRoleName:
     Description: "The name of the Data Scientist role to attach permissions to"
     Type: "AWS::SSM::Parameter::Value<String>"
-    Default: "/SDLF/IAM/DataScientistRole" 
+    Default: "/LJHDATALAKE/IAM/DataScientistRole" 
   pCloudWatchEventStateMachineRoleName:
     Description: "The name of the CloudWatch Event role to attach permissions to"
     Type: "AWS::SSM::Parameter::Value<String>"
-    Default: "/SDLF/IAM/CloudWatchEventStateMachineRole"
+    Default: "/LJHDATALAKE/IAM/CloudWatchEventStateMachineRole"
   pS3CentralBucket:
     Description: "The dataset bucket"
     Type: String
