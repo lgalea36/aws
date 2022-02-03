@@ -32,14 +32,14 @@ then
 fi
 if ! $sflag
 then
-    S3_BUCKET=$(sed -e 's/^"//' -e 's/"$//' <<<"$(aws ssm get-parameter --name /SDLF/S3/CFNBucket --profile $PROFILE --query "Parameter.Value")")
+    S3_BUCKET=$(sed -e 's/^"//' -e 's/"$//' <<<"$(aws ssm get-parameter --name /LJHDATALAKE/S3/CFNBucket --profile $PROFILE --query "Parameter.Value")")
 fi
 if ! $nflag
 then
     STACK_NAME="sdlf-foundations"
 fi
 
-ENV=$(sed -e 's/^"//' -e 's/"$//' <<<"$(aws ssm get-parameter --name /SDLF/Misc/pEnv --profile $PROFILE --query "Parameter.Value")")
+ENV=$(sed -e 's/^"//' -e 's/"$//' <<<"$(aws ssm get-parameter --name /LJHDATALAKE/Misc/pEnv --profile $PROFILE --query "Parameter.Value")")
 
 echo "Checking if bucket exists ..."
 if ! aws s3 ls $S3_BUCKET --profile $PROFILE; then
@@ -103,6 +103,6 @@ else
 fi
 
 echo "Loading Deequ scripts ..."
-ARTIFACTS_BUCKET=$(sed -e 's/^"//' -e 's/"$//' <<<"$(aws ssm get-parameter --name /SDLF/S3/ArtifactsBucket --profile $PROFILE --query "Parameter.Value")")
+ARTIFACTS_BUCKET=$(sed -e 's/^"//' -e 's/"$//' <<<"$(aws ssm get-parameter --name /LJHDATALAKE/S3/ArtifactsBucket --profile $PROFILE --query "Parameter.Value")")
 aws s3 cp ./scripts/deequ/jar/deequ-1.0.3-RC1.jar s3://$ARTIFACTS_BUCKET/deequ/jars/ --profile $PROFILE
 aws s3 sync ./scripts/deequ/resources/ s3://$ARTIFACTS_BUCKET/deequ/scripts/ --profile $PROFILE
