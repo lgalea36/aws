@@ -188,8 +188,11 @@ Resources:
                 - aws configure set default.region $AWS_REGION
                 - git clone $REPO
                 - cd ./aws-serverless-data-lake-framework/
-                - git config --global user.email "lgalea@ljhooker.com"
-                - git config --global user.name "developer"
+                - git config --global user.email "robot@example.com"
+                - git config --global user.name "robot"
+                - ls -all
+                - chmod -R 777 deploy.sh 
+                - ls -all
                 - ./deploy.sh -f -o -c
           artifacts:
             files:
