@@ -1,0 +1,42 @@
+[
+    {
+        "ParameterKey": "workspace",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "bitbucketprojectkey",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "bitbucketuser",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "app_password",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "repository_prefix",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "ljhdatalake_aws_access_key_id",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "ljhdatalake_aws_secret_access_key",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "ljhdatalake_aws_session_token",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "ljhdatalake_aws_role_to_assume_name",
+        "ParameterValue": "<role>"
+    },
+    {
+        "ParameterKey": "ljhdatalake_aws_role_to_assume_arn",
+        "ParameterValue": "arn:aws:iam::<AWS_ACCOUNT>:role/<role>"
+    }
+  ]
