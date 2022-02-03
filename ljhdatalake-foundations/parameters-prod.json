@@ -1,0 +1,18 @@
+[
+    {
+        "ParameterKey": "pOrganizationName",
+        "ParameterValue": "LJHooker"
+    },
+    {
+        "ParameterKey": "pApplicationName",
+        "ParameterValue": "datalake"
+    },
+    {
+        "ParameterKey": "pNumBuckets",
+        "ParameterValue": "3"
+    },
+    {
+        "ParameterKey": "pSNSNotificationsEmail",
+        "ParameterValue": "lgalea@ljhooker.com"
+    }
+]

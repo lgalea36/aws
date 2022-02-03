@@ -1,0 +1,14 @@
+[
+    {
+        "ParameterKey": "pTeamName",
+        "ParameterValue": "dataengineering"
+    },
+    {
+        "ParameterKey": "pPipelineName",
+        "ParameterValue": "main"
+    },
+    {
+        "ParameterKey": "pDatasetName",
+        "ParameterValue": "crm"
+    }
+]
