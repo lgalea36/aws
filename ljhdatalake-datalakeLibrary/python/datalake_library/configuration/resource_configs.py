@@ -47,49 +47,49 @@ class S3Configuration(BaseConfig):
     def artifacts_bucket(self):
         if not self._artifacts_bucket:
             self._artifacts_bucket = self._get_ssm_param(
-                '/SDLF/S3/ArtifactsBucket')
+                '/LJHDATALAKE/S3/ArtifactsBucket')
         return self._artifacts_bucket
 
     @property
     def raw_bucket(self):
         if not self._raw_bucket:
             self._raw_bucket = self._get_ssm_param(
-                '/SDLF/S3/CentralBucket')
+                '/LJHDATALAKE/S3/CentralBucket')
         return self._raw_bucket
 
     @property
     def raw_bucket_kms_key(self):
         if not self._raw_bucket_kms_key:
             self._raw_bucket_kms_key = self._get_ssm_param(
-                '/SDLF/KMS/CentralBucket')
+                '/LJHDATALAKE/KMS/CentralBucket')
         return self._raw_bucket_kms_key
 
     @property
     def stage_bucket(self):
         if not self._stage_bucket:
             self._stage_bucket = self._get_ssm_param(
-                '/SDLF/S3/StageBucket')
+                '/LJHDATALAKE/S3/StageBucket')
         return self._stage_bucket
 
     @property
     def stage_bucket_kms_key(self):
         if not self._stage_bucket_kms_key:
             self._stage_bucket_kms_key = self._get_ssm_param(
-                '/SDLF/KMS/StageBucket')
+                '/LJHDATALAKE/KMS/StageBucket')
         return self._stage_bucket_kms_key
 
     @property
     def analytics_bucket(self):
         if not self._analytics_bucket:
             self._analytics_bucket = self._get_ssm_param(
-                '/SDLF/S3/AnalyticsBucket').split(':')[-1]
+                '/LJHDATALAKE/S3/AnalyticsBucket').split(':')[-1]
         return self._analytics_bucket
 
     @property
     def analytics_bucket_kms_key(self):
         if not self._analytics_bucket_kms_key:
             self._analytics_bucket_kms_key = self._get_ssm_param(
-                '/SDLF/KMS/AnalyticsBucket')
+                '/LJHDATALAKE/KMS/AnalyticsBucket')
         return self._analytics_bucket_kms_key
 
 
@@ -116,21 +116,21 @@ class DynamoConfiguration(BaseConfig):
     def object_metadata_table(self):
         if not self._object_metadata_table:
             self._object_metadata_table = self._get_ssm_param(
-                '/SDLF/Dynamo/ObjectCatalog')
+                '/LJHDATALAKE/Dynamo/ObjectCatalog')
         return self._object_metadata_table
 
     @property
     def transform_mapping_table(self):
         if not self._transform_mapping_table:
             self._transform_mapping_table = self._get_ssm_param(
-                '/SDLF/Dynamo/TransformMapping')
+                '/LJHDATALAKE/Dynamo/TransformMapping')
         return self._transform_mapping_table
 
     @property
     def manifests_control_table(self):
         if not self._manifests_control_table:
             self._manifests_control_table = self._get_ssm_param(
-                '/SDLF/Dynamo/Manifests')
+                '/LJHDATALAKE/Dynamo/Manifests')
         return self._manifests_control_table
 
 
@@ -159,14 +159,14 @@ class SQSConfiguration(BaseConfig):
     def get_stage_queue_name(self):
         if not self._stage_queue_name:
             self._stage_queue_name = self._get_ssm_param(
-                '/SDLF/SQS/{}/{}{}Queue'.format(self._team, self._prefix, self._stage))
+                '/LJHDATALAKE/SQS/{}/{}{}Queue'.format(self._team, self._prefix, self._stage))
         return self._stage_queue_name
 
     @property
     def get_stage_dlq_name(self):
         if not self._stage_dlq_name:
             self._stage_dlq_name = self._get_ssm_param(
-                '/SDLF/SQS/{}/{}{}DLQ'.format(self._team, self._prefix, self._stage))
+                '/LJHDATALAKE/SQS/{}/{}{}DLQ'.format(self._team, self._prefix, self._stage))
         return self._stage_dlq_name
 
 
@@ -194,7 +194,7 @@ class StateMachineConfiguration(BaseConfig):
     def get_stage_state_machine_arn(self):
         if not self._stage_state_machine_arn:
             self._stage_state_machine_arn = self._get_ssm_param(
-                '/SDLF/SM/{}/{}{}SM'.format(self._team, self._pipeline, self._stage))
+                '/LJHDATALAKE/SM/{}/{}{}SM'.format(self._team, self._pipeline, self._stage))
         return self._stage_state_machine_arn
 
 
@@ -220,5 +220,5 @@ class KMSConfiguration(BaseConfig):
     def get_kms_arn(self):
         if not self._kms_arn:
             self._kms_arn = self._get_ssm_param(
-                '/SDLF/KMS/{}/DataKeyId'.format(self._team))
+                '/LJHDATALAKE/KMS/{}/DataKeyId'.format(self._team))
         return self._kms_arn
