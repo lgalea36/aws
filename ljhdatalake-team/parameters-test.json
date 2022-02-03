@@ -1,0 +1,22 @@
+[
+    {
+        "ParameterKey": "pTeamName",
+        "ParameterValue": "dataengineering"
+    },
+    {
+        "ParameterKey": "pDatalakeLibraryRepositoryName",
+        "ParameterValue": "ljhdatalake-engineering-datalakeLibrary"
+    },
+    {
+        "ParameterKey": "pPipLibrariesRepositoryName",
+        "ParameterValue": "ljhdatalake-engineering-pipLibrary"
+    },
+    {
+        "ParameterKey": "pLibrariesBranchName",
+        "ParameterValue": "dev"
+    },
+    {
+        "ParameterKey": "pSNSNotificationsEmail",
+        "ParameterValue": "lgalea@ljhooker.com"
+    }
+] 
